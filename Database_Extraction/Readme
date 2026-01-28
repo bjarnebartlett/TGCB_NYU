@@ -1,0 +1,58 @@
+1. National Center for Biotechnology Information (NCBI)
+Dataset Extracted: Homo sapiens Genome (GRCh38.p14)
+Web Interface Process:
+Navigated to the NCBI Datasets page.
+Searched for "Human" in the genome search bar.
+Selected the Reference Genome (Accession: GCA_000001405.29).
+API Process: Used the NCBI Datasets API v2.
+Endpoint: https://api.ncbi.nlm.nih.gov/datasets/v2/genome/taxon/9606/dataset_report
+Result (JSON): ```json {"reports":[{"accession":"GCA_000001405.29","organism":{"tax_id":9606,"organism_name":"Homo sapiens","common_name":"human"}...]}
+
+2. BioModels
+Model Extracted: BIOMD0000000001 (MAPK cascade)
+Web Interface Process:
+Visited BioModels Home.
+Entered "BIOMD0000000001" in the search box.
+Viewed the curated model details, including the publication "Edelstein1996".
+API Process: Used the BioModels REST API with a JSON format parameter.
+Endpoint: https://www.ebi.ac.uk/biomodels/BIOMD0000000001?format=json
+Result (JSON/HTML): ```json { "name": "Edelstein1996 - EPSP ACh event", "description": "Model of a nicotinic Excitatory Post-Synaptic Potential..." }
+
+3. BioCyc Pathway/Genome Database
+Dataset Extracted: Tryptophan Biosynthesis (E. coli K-12)
+Web Interface Process:
+Accessed BioCyc.org and selected the "EcoCyc" database.
+Searched for "Tryptophan Biosynthesis" under the Pathway search.
+Viewed the metabolic map showing the conversion from Chorismate to L-tryptophan.
+API Process: Used the BioCyc XML web service.
+Endpoint: https://biocyc.org/getxml?id=ECOLI:TRPSYN-PWY
+Result (XML):
+XML
+<Pathway ID='ECOLI:TRPSYN-PWY' orgid='ECOLI' primary-name='tryptophan biosynthesis'>...</Pathway>
+
+4. Kyoto Encyclopedia of Genes and Genomes (KEGG)
+Dataset Extracted: Glycolysis / Gluconeogenesis (hsa00010)
+Web Interface Process:
+Visited KEGG Pathway.
+Searched for "hsa00010".
+Viewed the high-resolution pathway map with highlighted enzymes.
+API Process: Used the KEGG REST API. Note: Required troubleshooting 404 errors by adjusting the endpoint to the direct ID.
+Endpoint: https://rest.kegg.jp/get/hsa00010
+Result (Flatfile):
+Plaintext
+ENTRY       hsa00010                    Pathway
+NAME        Glycolysis / Gluconeogenesis - Homo sapiens (human)
+CLASS       Metabolism; Carbohydrate metabolism
+
+5. Pathway Commons
+Dataset Extracted: TP53 Interaction Network
+Web Interface Process:
+Visited Pathway Commons.
+Searched for "TP53" to find related signaling pathways.
+Filtered results by "Pathway" to see curated interaction data.
+API Process: Used the PC2 search API.
+Endpoint: https://www.pathwaycommons.org/pc2/search.json?q=TP53
+Result (JSON):
+JSON
+{"searchHit":[{"uri":"http://identifiers.org/reactome/R-HSA-5633007","name":"Transcriptional regulation by TP53"}]}
+                                   
